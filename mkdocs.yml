@@ -44,7 +44,7 @@ theme:
 nav:
   - 首页: index.md
   - 出版物: 
-    - 专利: 基于智慧家庭多维信息的动态社交网络快照分析及种子节点预测方法.md
+    - 专利: 基于智慧家庭多维信息的动态社交网络快照分析及种子节点预测方法.pdf
     - 论文: Project_guidence.md
   - 快速入门:
     - 入门指南: getting-started.md
