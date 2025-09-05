@@ -1,35 +1,32 @@
 # mkdocs.yml
 site_name: Lyz's Docs
 site_description: 我的技术笔记与知识库
-site_url: https://dynamicgraphinfluencemaximization.mmgg.dpdns.org/  # 替换为你的实际地址
+site_url: https://dynamicgraphinfluencemaximization.mmgg.dpdns.org/
 site_author: Lyz
 
 # 主题配置
 theme:
   name: material
   language: zh
-  favicon: assets/favicon.png  # 自定义图标（可选）
-  logo: assets/logo.png        # 顶部左侧 Logo（可选）
+  favicon: assets/favicon.png
+  logo: material/github
 
-  # 启用核心功能
   features:
-    - navigation.tabs           # 顶部标签页导航
-    - navigation.tabs.sticky    # 标签页固定
-    - navigation.sections       # 分组导航
-    - navigation.expand       # 展开所有侧边栏
-    - toc.integrate           # 将目录集成到侧边栏
-    - content.code.annotate     # 代码注释支持
-    - content.code.copy         # 一键复制代码块
-    - content.tabs              # 支持选项卡
-    - content.toc               # 显示目录
-    - content.math              # 数学公式渲染
-    - content.tooltips          # 工具提示（如缩写）
-    - search.suggest            # 搜索建议
-    - search.highlight          # 搜索高亮
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - toc.integrate
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs
+    - content.toc
+    - content.math
+    - content.tooltips
+    - search.suggest
+    - search.highlight
 
-  # 自定义调色板（可选）
   palette:
-    # 主色调
     - scheme: default
       primary: indigo
       accent: blue
@@ -43,7 +40,7 @@ theme:
         icon: material/toggle-switch-off
         name: 切换亮暗模式
 
-# 导航结构（清晰组织内容）
+# 导航结构
 nav:
   - 首页: index.md
   - 快速入门:
@@ -55,44 +52,24 @@ nav:
   - API 文档: api-reference.md
   - 关于我们: about.md
 
-# 插件（增强功能）
+# 插件（修复：移除有问题的插件）
 plugins:
   - search
-  - minify  # 可选：压缩 HTML/CSS/JS（需安装 mkdocs-minify-plugin）
-  - git-revision-date-localized  # 显示最后更新时间
-  - mkdocstrings: python  # 自动生成 API 文档（可选）
-
-# Markdown 扩展（支持更多语法）
-markdown_extensions:
-  - admonition                  # 警告框（注意、提示等）
-  - attr_list                   # 支持 {#id .class} 语法
-  - def_list                    # 定义列表
-  - footnotes                   # 脚注
-  - meta                        # 元数据（如 title, description）
-  - toc:permalink=true          # 目录带锚点
-  - pymdownx.highlight          # 高级代码高亮
-  - pymdownx.inlinehilite       # 行内代码高亮
-  - pymdownx.keys               # 键盘快捷键显示
-  - pymdownx.superfences        # 多语言代码块
-  - pymdownx.details            # 折叠内容
-  - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-  - pymdownx.smartsymbols       # 智能符号（如 →, ©）
-  - pymdownx.tasklist:
-      custom_checkbox: true    # 支持任务列表 ✔
+  # - minify  # ❌ 注释掉，除非你安装了 mkdocs-minify-plugin
+  # - git-revision-date-localized  # 可选：显示最后更新时间（需安装）
+  # - mkdocstrings  # ❌ 注释掉，除非你需要 API 自动生成
 
 # 额外资源
 extra_css:
-  - stylesheets/extra.css       # 自定义 CSS（可选）
+  - stylesheets/extra.css
 
 extra_javascript:
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js  # 数学公式
-  - javascripts/mathjax-config.js  # 可选：MathJax 配置
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  # - javascripts/mathjax-config.js  # 可选，确保文件存在再启用
 
-# 静态资源复制
+# 额外信息
 extra:
-  generator: true               # 显示“由 MkDocs 生成”
+  generator: true
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/yourusername
