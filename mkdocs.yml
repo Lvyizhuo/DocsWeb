@@ -8,8 +8,9 @@ site_author: Lyz
 theme:
   name: material
   language: zh
-  favicon: assets/favicon.png
-  logo: material/github
+  icon:
+    logo:material/github
+
 
   features:
     - navigation.tabs
